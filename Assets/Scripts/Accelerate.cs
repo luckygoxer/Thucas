@@ -36,22 +36,28 @@ public class Accelerate : MonoBehaviour
 
     public bool IsGrounded()
     {
-        Vector3 origin = transform.position;
+        Vector3 origin = transform.position + Vector3.up * 0.1f; // Slightly raise the origin to avoid false negatives
         Vector3 direction = Vector3.down;
-        float distance = 1.1f;
+        float distance = 1f; // Increase the distance slightly
 
-        Debug.DrawLine(transform.position, transform.position + Vector3.down * 1.1f, Color.red);
+        Debug.DrawLine(origin, origin + direction * distance, Color.red);
 
         RaycastHit hitInfo;
 
-        if(Physics.Raycast(origin, direction, out hitInfo, distance))
+        if (Physics.Raycast(origin, direction, out hitInfo, distance))
         {
-            if (!hitInfo.collider.gameObject.CompareTag("Road"))
+            if (hitInfo.collider != null)
             {
-                rb.velocity *= groundFrictionElse;
+                if (hitInfo.collider.gameObject.CompareTag("Road"))
+                {
+                    rb.velocity *= groundFriction;
+                }
+                else
+                {
+                    rb.velocity *= groundFrictionElse;
+                }
+                return true;
             }
-            rb.velocity *= groundFriction;
-            return true;
         }
         return false;
     }
