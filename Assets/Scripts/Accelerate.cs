@@ -38,7 +38,7 @@ public class Accelerate : MonoBehaviour
     {
         Vector3 origin = transform.position + Vector3.up * 0.1f; // Slightly raise the origin to avoid false negatives
         Vector3 direction = Vector3.down;
-        float distance = 1f; // Increase the distance slightly
+        float distance = 1f; // Adjust the distance
 
         Debug.DrawLine(origin, origin + direction * distance, Color.red);
 
@@ -54,7 +54,8 @@ public class Accelerate : MonoBehaviour
                 }
                 else
                 {
-                    rb.velocity *= groundFrictionElse;
+                    rb.velocity *= groundFrictionElse; // Ensure groundFrictionElse is less than 1
+                    rb.AddForce(-rb.velocity * (1 - groundFrictionElse), ForceMode.Acceleration); // Apply deceleration force
                 }
                 return true;
             }

@@ -9,6 +9,7 @@ TagManager:
   - Trigger
   - Damage
   - Treehouse
+  - Waypoint
   layers:
   - Default
   - TransparentFX
