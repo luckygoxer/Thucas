@@ -2116,7 +2116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de6ecda446598c4e9a2ad2adf9d6a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lapCounter: {fileID: 0}
+  lapCounter: {fileID: 143985793}
   waypoints:
   - {fileID: 97688361}
   - {fileID: 1238937963}
