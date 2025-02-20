@@ -1,8 +1,10 @@
 using UnityEngine;
+
 public class PlayerCheckpointSystem : MonoBehaviour
 {
 	public LapCounter lapCounter; // Reference to the LapCounter script
 	public Transform[] waypoints;
+
 	private int currentWaypointIndex = 0;
 	private int waypointsHit = 0;
 	void Start()
