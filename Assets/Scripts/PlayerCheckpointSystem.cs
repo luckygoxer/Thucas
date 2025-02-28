@@ -91,9 +91,6 @@ public class PlayerCheckpointSystem : MonoBehaviour
 			}
 		}
 	}
-
-
-
 }
 
 
