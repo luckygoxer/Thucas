@@ -9,7 +9,7 @@ public class Accelerate : MonoBehaviour
 
     public float accelaration = 80f;
     public float groundFriction = 0.5f;
-    public float groundFrictionElse = 0.8f;
+    public float groundFrictionElse = 0.1f;
 
     public bool isAlive = true;
 
@@ -54,7 +54,7 @@ public class Accelerate : MonoBehaviour
                 }
                 else
                 {
-                    rb.velocity *= groundFrictionElse;
+                    rb.velocity *= groundFrictionElse - 0.2f;
                 }
                 return true;
             }
