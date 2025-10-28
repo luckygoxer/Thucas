@@ -5,25 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Welcome.unity
     guid: 097fb4ac540be1e4d86d8be151e483f9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Info.unity
     guid: 62c99fa55526c2840a5ffc3a29f0012f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level1.unity
     guid: 2b572fac9e3419543bc17dfcc0126ffe
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level2.unity
     guid: 50c3aca08b5e89940b14a3a5af5c96ac
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Story.unity
     guid: 94ceb42c33cbe2b499975e12768f2056
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level3.unity
     guid: f05d8bc7033269946abd5da5682a4e35
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Win.unity
     guid: 3ccb921e7a2e18d4bacc6a4666a75a9f
+  - enabled: 1
+    path: Assets/Scenes/Racetrack 1.unity
+    guid: 1a98dec843f0eee42840a1fc6821997d
   m_configObjects: {}
